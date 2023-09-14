@@ -1,5 +1,5 @@
 Flask
 Flask-SQLAlchemy
 flask-smorest
-marshmellow
+marshmallow
 gunicorn
