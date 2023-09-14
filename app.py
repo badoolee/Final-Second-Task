@@ -20,6 +20,8 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 api = Api(app)
 
+db.init_app(app)
+
 @app.before_request
 def create_tables():
     db.create_all()
@@ -27,5 +29,4 @@ def create_tables():
 api.register_blueprint(Userblp)
 
 if __name__ == "__main__":
-    db.init_app(app)
     app.run(port=5000, debug=True)
